@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://w2tquib475uj"]
+
+[ext_resource type="Script" uid="uid://10k6bue5uqul" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://c5jjv87aik01k" path="res://player.gd" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://blsf8mbms2bd6" path="res://leaf.gd" id="3_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_h2yge")
+
+[node name="player" type="Area2D" parent="."]
+script = ExtResource("2_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+
+[node name="leaf" type="Area2D" parent="."]
+script = ExtResource("3_lquwl")
