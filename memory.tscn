@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0k7fsiifqwu0"]
 
 [ext_resource type="Script" uid="uid://blsf8mbms2bd6" path="res://leaf.gd" id="1_kh0cx"]
-[ext_resource type="Texture2D" uid="uid://cd1ugdbel1k68" path="res://images/Memory.png" id="2_fx0hl"]
+[ext_resource type="Texture2D" uid="uid://cojs6w5jv2w6m" path="res://images/Leaf.png" id="2_fx0hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fx0hl"]
 

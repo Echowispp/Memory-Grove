@@ -1,11 +1,14 @@
 extends Area2D
 
+@onready var memory_popup = owner.get_node("MemoryPopup")
+@onready var player = owner.get_node("WorldSort/player")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	z_index = int(global_position.y)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func _process(_delta: float):
+	var player_distance = player.position - self.position;
+	if player_distance.length() < 32 and Input.is_action_just_pressed("interact"):
+		memory_popup._show_memory("example", "example paragraph")

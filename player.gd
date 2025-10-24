@@ -1,7 +1,6 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var speed = 100
-var screen_size
 var idle_time = 0.0
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -10,11 +9,10 @@ var idle_time = 0.0
 #@onready var collision_shape = $CollisionShape2D
 
 func _ready():
-	screen_size = get_viewport_rect().size
+	pass
 
-
-func _process(delta: float):
-	var velocity = Vector2.ZERO
+func _physics_process(delta: float):
+	velocity = Vector2.ZERO
 	if (Input.is_action_pressed ("move_right") ):
 		velocity.x += 1
 	if (Input.is_action_pressed ("move_left") ):
@@ -26,7 +24,7 @@ func _process(delta: float):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		position += velocity * delta
+		move_and_slide()
 		idle_time = 0.0
 
 		var movement_angle_rad = velocity.angle()
@@ -52,4 +50,3 @@ func _process(delta: float):
 	elif idle_time < 10:
 		animated_sprite.play("idle")
 		idle_time += delta
-	
