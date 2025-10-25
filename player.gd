@@ -3,6 +3,9 @@ extends CharacterBody2D
 @export var speed = 100
 var idle_time = 0.0
 
+#var debug_runtime = 0.0
+#var debug_runtime_s = 0.0
+
 @onready var animated_sprite = $AnimatedSprite2D
 ## Might not need the collision shape to be shortcut,
 ## but it's good to have easily available
@@ -13,13 +16,13 @@ func _ready():
 
 func _physics_process(delta: float):
 	velocity = Vector2.ZERO
-	if (Input.is_action_pressed ("move_right") ):
+	if (Input.is_action_pressed("move_right")):
 		velocity.x += 1
-	if (Input.is_action_pressed ("move_left") ):
+	if (Input.is_action_pressed("move_left")):
 		velocity.x -= 1
-	if (Input.is_action_pressed ("move_up") ):
+	if (Input.is_action_pressed("move_up")):
 		velocity.y -= 1
-	if (Input.is_action_pressed ("move_down") ):
+	if (Input.is_action_pressed("move_down")):
 		velocity.y += 1
 
 	if velocity.length() > 0:
@@ -50,3 +53,9 @@ func _physics_process(delta: float):
 	elif idle_time < 10:
 		animated_sprite.play("idle")
 		idle_time += delta
+	#debug_runtime += delta;
+	#if debug_runtime > 0.1:
+		#debug_runtime = 0.0;
+		#debug_runtime_s += 0.1;
+		#print(debug_runtime_s);
+	#print("a frame passed");

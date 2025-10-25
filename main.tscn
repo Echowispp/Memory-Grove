@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://yr6nougc81wa"]
+[gd_scene load_steps=13 format=4 uid="uid://yr6nougc81wa"]
 
 [ext_resource type="Script" uid="uid://10k6bue5uqul" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c0k7fsiifqwu0" path="res://memory.tscn" id="2_lquwl"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd4xgqmsyyho4" path="res://popup_panel.tscn" id="4_7mycd"]
 [ext_resource type="Texture2D" uid="uid://d4gnwdcrcomjo" path="res://images/RPG Nature Tileset Autumn.png" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://266nf8s00yu7" path="res://images/RPG Nature Tileset.png" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://ckw5iw5egnkyp" path="res://tooltip_panel.tscn" id="7_272bh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("5_5vw27")
@@ -333,3 +334,6 @@ position = Vector2(-33, 69)
 rotation = -1.9687314
 
 [node name="player" parent="WorldSort" instance=ExtResource("3_7mycd")]
+
+[node name="TooltipPanel" parent="." instance=ExtResource("7_272bh")]
+visible = false
