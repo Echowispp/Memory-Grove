@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cattftuwsnals"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ii8dd"]
+bg_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+VBoxContainer/styles/StyleBox = SubResource("StyleBoxFlat_ii8dd")

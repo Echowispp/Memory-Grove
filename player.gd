@@ -11,8 +11,13 @@ var idle_time = 0.0
 ## but it's good to have easily available
 #@onready var collision_shape = $CollisionShape2D
 
-func _ready():
-	pass
+#func _ready():
+	#pass
+
+func _trigger_ending():
+	print("ending triggered in player")
+	set_physics_process(false);
+	animated_sprite.play("rest")
 
 func _physics_process(delta: float):
 	velocity = Vector2.ZERO
