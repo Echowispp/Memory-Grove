@@ -10,3 +10,4 @@
 <p>Next, I went on to add functionality to the memories.</p>
 <p> After some debugging and minor tweaks to code (If I remember correctly, here I changed to two tilesets), I made the "story" part of the game and (sorry for that being just in one commit)</p>
 Link to itch: https://echowispp.itch.io/memory-grove
+Assets from last tick on itch
